@@ -34,6 +34,8 @@ app.use('/api/upload', uploadRoutes); // Upload route
 app.use('/api/chat', chatRoutes);
 // app.use('/api/payment', paymentRoutes);
 app.use('/api/social', socialRoutes);
+const applicationRoutes = require('./routes/applicationRoutes');
+app.use('/api/applications', applicationRoutes);
 
 // connect to DB
 mongoose.connect(process.env.MONGO_URI)
